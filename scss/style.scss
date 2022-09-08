@@ -1,1 +1,28 @@
-@import "header.scss";
+@import "_header.scss";
+
+[class*="__container"] {
+  max-width: 1320px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--white);
+  line-height: 28px;
+}
+.btn {
+  padding: 19px 28px;
+  height: 58px;
+  border-radius: 6px;
+  background: var(--gradient-main-right);
+  font-weight: 600;
+  font-size: 17px;
+  transition: all 0.7s ease;;
+  &:hover{
+    background: var(--gradient-main-left);
+    transform: scale(1.02);
+  }
+}
