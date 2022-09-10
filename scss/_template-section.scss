@@ -1,0 +1,102 @@
+@import "_reset.scss";
+@import "_variables.scss";
+
+.template-left {
+  @include template-container;
+  padding-bottom: 420px;
+  &__img-wrapper {
+    max-width: 1011px;
+    z-index: 1;
+    img {
+      object-fit: cover;
+      border-radius: 0 15px 15px 0;
+    }
+  }
+  &__border {
+    @include template-border;
+    top: 72px;
+    left: 197px;
+    border-image-source: var(--gradient-main-right);
+  }
+  .success-company {
+    @include template-bg;
+    right: 0;
+    border-radius: 15px 0 0 15px;
+    padding: 68.8px 0 68.8px 82px;
+
+    &__subtitle {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 30px;
+      color: var(--white);
+      padding-top: 28px;
+    }
+    &__list {
+      padding-top: 41px;
+      &-item + * {
+        padding-top: 18px;
+      }
+    }
+  }
+  .success-measurement {
+    @include template-bg;
+    right: 0;
+    border-radius: 15px 0 0 15px;
+    padding: 193px 0 193px 82px;
+    &__title {
+      max-width: 638px;
+      padding-bottom: 31px;
+    }
+    &__txt {
+      max-width: 559px;
+      & + * {
+        padding-top: 18px;
+      }
+    }
+    &__btn {
+      margin-top: 41px;
+    }
+  }
+}
+.template-right {
+  @include template-container;
+  padding-bottom: 350px;
+  .logistics {
+    z-index: 2;
+    width: 1120px;
+    height: 747px;
+    border-radius: 0 15px 15px 0;
+    background: var(--dark);
+    padding: 163px 82px 163px 0;
+    &__title {
+      max-width: 499px;
+      padding-bottom: 31px;
+    }
+    &__txt {
+      max-width: 739px;
+      & + * {
+        padding-top: 18px;
+      }
+    }
+    &__btn {
+      margin-top: 43px;
+    }
+  }
+  &__img-wrapper {
+    position: absolute;
+    top: -173px;
+    right: 0;
+    max-width: 1011px;
+    z-index: 1;
+    img {
+      object-fit: cover;
+      border-radius: 15px 0 0 15px;
+    }
+  }
+  &__border {
+    @include template-border;
+    top: -102px;
+    right: 197px;
+    border-image-source: var(--gradient-main-left);
+  }
+}
