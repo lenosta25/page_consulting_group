@@ -1,4 +1,5 @@
 @import "_header.scss";
+@import "_about-company";
 
 [class*="__container"] {
   max-width: 1320px;
@@ -13,6 +14,14 @@ body {
   color: var(--white);
   line-height: 28px;
 }
+main{
+  background: var(--main-bg-page);
+}
+h2 {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 50px;
+}
 .btn {
   padding: 19px 28px;
   height: 58px;
@@ -20,8 +29,8 @@ body {
   background: var(--gradient-main-right);
   font-weight: 600;
   font-size: 17px;
-  transition: all 0.7s ease;;
-  &:hover{
+  transition: all 0.7s ease;
+  &:hover {
     background: var(--gradient-main-left);
     transform: scale(1.02);
   }
