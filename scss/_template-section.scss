@@ -3,11 +3,12 @@
 
 .template-left {
   @include template-container;
-  padding-bottom: 420px;
+  margin-bottom: 520px;
   &__img-wrapper {
     max-width: 1011px;
     z-index: 1;
     img {
+      width: 100%;
       object-fit: cover;
       border-radius: 0 15px 15px 0;
     }
@@ -22,8 +23,7 @@
     @include template-bg;
     right: 0;
     border-radius: 15px 0 0 15px;
-    padding: 68.8px 0 68.8px 82px;
-
+    padding: 68px 0 68px 82px;
     &__subtitle {
       font-weight: 500;
       font-size: 24px;
@@ -32,9 +32,32 @@
       padding-top: 28px;
     }
     &__list {
-      padding-top: 41px;
-      &-item + * {
+      padding-top: clamp(0.313rem, -0.137rem + 2.25vw, 2.563rem);
+      &-item {
+        position: relative;
+        padding-left: 30px;
         padding-top: 18px;
+        &::before {
+          position: absolute;
+          top: 20px;
+          left: 0;
+          padding-left: 14px;
+          content: "";
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: var(--gradient-main-right);
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          top: 25px;
+          left: 5px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: var(--dark);
+        }
       }
     }
   }
@@ -44,7 +67,7 @@
     border-radius: 15px 0 0 15px;
     padding: 193px 0 193px 82px;
     &__title {
-      max-width: 638px;
+      max-width: 650px;
       padding-bottom: 31px;
     }
     &__txt {
@@ -60,16 +83,14 @@
 }
 .template-right {
   @include template-container;
-  padding-bottom: 350px;
+  margin-bottom: 350px;
+  flex-direction: row-reverse;
   .logistics {
-    z-index: 2;
-    width: 1120px;
-    height: 747px;
+    @include template-bg;
+    left: 0;
     border-radius: 0 15px 15px 0;
-    background: var(--dark);
-    padding: 163px 82px 163px 0;
+    padding: 163px 82px 163px clamp(5.125rem, -43.536rem + 51.9vw, 18.75rem);
     &__title {
-      max-width: 499px;
       padding-bottom: 31px;
     }
     &__txt {
@@ -83,20 +104,100 @@
     }
   }
   &__img-wrapper {
-    position: absolute;
-    top: -173px;
-    right: 0;
     max-width: 1011px;
     z-index: 1;
     img {
+      width: 100%;
       object-fit: cover;
       border-radius: 15px 0 0 15px;
     }
   }
   &__border {
     @include template-border;
-    top: -102px;
+    top: 102px;
     right: 197px;
     border-image-source: var(--gradient-main-left);
+  }
+}
+@media (max-width: 1650px) {
+  .template-right__img-wrapper,
+  .template-left__img-wrapper {
+    max-width: 800px;
+  }
+}
+@media (max-width: 1270px) {
+  .template-left .success-company,
+  .template-left .success-measurement,
+  .template-right .logistics {
+    top: 0;
+    opacity: 0.95;
+    max-width: 100%;
+    border-radius: 0;
+  }
+  .template-left,
+  .template-right {
+    display: block;
+    &__border {
+      display: none;
+    }
+  }
+  .template-right__img-wrapper,
+  .template-left__img-wrapper {
+    max-width: 100%;
+    img {
+      border-radius: 0;
+      height: 750px;
+    }
+  }
+}
+@media (max-width: 980px) {
+  .template-left .success-company,
+  .template-left .success-measurement,
+  .template-right .logistics {
+    &__title {
+      font-size: clamp(1.688rem, 1.354rem + 1.67vw, 2.375rem);
+      line-height: clamp(2.5rem, 2.197rem + 1.52vw, 3.125rem);
+    }
+  }
+  .template-left .success-company {
+    padding: 68px 0;
+  }
+  .template-left .success-measurement,
+  .template-right .logistics {
+    padding: 150px 0;
+  }
+}
+@media (max-width: 700px) {
+  .template-left {
+    .img {
+      height: 1000px;
+    }
+    .success-company {
+      height: 1000px;
+      &__title,
+      &__subtitle {
+        text-align: center;
+      }
+    }
+    .success-measurement {
+      text-align: center;
+    }
+  }
+  .template-right .logistics {
+    text-align: center;
+  }
+}
+@media (max-width: 424px) {
+  .template-left {
+    .img {
+      height: 1040px;
+    }
+    .success-company {
+      height: 1040px;
+      padding: 50px 0;
+    }
+  }
+  .template-right .logistics {
+    padding: 50px 0;
   }
 }
