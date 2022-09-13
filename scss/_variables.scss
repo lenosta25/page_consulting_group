@@ -1,6 +1,5 @@
 :root {
   --main-bg-page: #f5f5f5;
-  --main-bg: #f8f8f8;
   --dark: #232626;
   --dark-shade: #5d5e5f;
   --white: #ffffff;
@@ -50,4 +49,16 @@
   max-width: 1100px;
   height: 750px;
   background: var(--dark);
+}
+@mixin arrow{
+  font-weight: 700;
+  font-size: 33px;
+  color: var(--hover-color);
+}
+@mixin arrow-bg {
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  line-height: 77px;
+  text-align: center;
 }

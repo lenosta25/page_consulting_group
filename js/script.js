@@ -29,3 +29,26 @@ link.forEach((e) => {
     body.classList.remove("_disable-skroll");
   });
 });
+
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  spaceBetween: 30,
+  slidesPerView: 4,
+  loop: true,
+  
+  // If we need pagination
+  // pagination: {
+  //   el: '.swiper-pagination',
+  // },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+});

@@ -1,6 +1,7 @@
 @import "_header.scss";
 @import "_about-company.scss";
 @import "_template-section.scss";
+@import "_swiper.scss";
 
 [class*="__container"] {
   max-width: 1320px;
@@ -23,9 +24,11 @@ h2 {
   font-size: 38px;
   line-height: 50px;
 }
-// h3{
-  // для карточек
-// }
+h3 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 33px;
+}
 .btn {
   padding: 19px 28px;
   height: 58px;
