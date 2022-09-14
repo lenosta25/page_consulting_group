@@ -2,6 +2,7 @@
 @import "_about-company.scss";
 @import "_template-section.scss";
 @import "_swiper.scss";
+@import "_company-help.scss";
 
 [class*="__container"] {
   max-width: 1320px;
@@ -41,16 +42,26 @@ h3 {
   font-size: clamp(1.125rem, 1rem + 0.63vw, 1.75rem);
   line-height: 33px;
 }
-.btn {
+.btn,
+.btn-white {
   padding: 19px 28px;
   height: 58px;
   border-radius: 6px;
-  background: var(--gradient-main-right);
   font-weight: 600;
   font-size: 17px;
   transition: all 0.7s ease;
+}
+.btn {
+  background: var(--gradient-main-right);
   &:hover {
     background: var(--gradient-main-left);
     transform: scale(1.02);
+  }
+}
+.btn-white {
+  background: var(--white);
+  color: var(--slider-button);
+  &:hover{
+    transform: scale(1.1)
   }
 }
