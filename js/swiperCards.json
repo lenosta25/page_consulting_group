@@ -1,0 +1,37 @@
+[
+   {
+      "id": 1,
+      "imgSrc": "global-structure-networking.png",
+      "imgAlt": "global structure networking",
+      "title": "Communication & Media Services",
+      "link": "#"
+   },
+   {
+      "id": 2,
+      "imgSrc": "software-engineer-analyzing-code.png",
+      "imgAlt": "software engineer analyzing code",
+      "title": "Sourcing It Infrastructure",
+      "link": "#"
+   },
+   {
+      "id": 3,
+      "imgSrc": "robot-forklift.png",
+      "imgAlt": "robot forklift",
+      "title": "Supply Chain & Procurement",
+      "link": "#"
+   },
+   {
+      "id": 4,
+      "imgSrc": "girl-analyzes-data.png",
+      "imgAlt": "girl analyzes data",
+      "title": "Private Equity",
+      "link": "#"
+   },
+   {
+      "id": 5,
+      "imgSrc": "transportation-logistics.png",
+      "imgAlt": "transportation logistics",
+      "title": "Transportation & Logistics",
+      "link": "#"
+   }
+]

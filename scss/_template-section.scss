@@ -150,14 +150,6 @@
   }
 }
 @media (max-width: 980px) {
-  .template-left .success-company,
-  .template-left .success-measurement,
-  .template-right .logistics {
-    &__title {
-      font-size: clamp(1.688rem, 1.354rem + 1.67vw, 2.375rem);
-      line-height: clamp(2.5rem, 2.197rem + 1.52vw, 3.125rem);
-    }
-  }
   .template-left .success-company {
     padding: 68px 0;
   }
@@ -173,10 +165,6 @@
     }
     .success-company {
       height: 1000px;
-      &__title,
-      &__subtitle {
-        text-align: center;
-      }
     }
     .success-measurement {
       text-align: center;

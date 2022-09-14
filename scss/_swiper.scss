@@ -3,6 +3,7 @@
 .swiper {
   max-width: 1920px;
   width: 100%;
+  padding: 0 15px;
   margin: 0 auto;
   position: relative;
   margin-top: 420px;
@@ -38,7 +39,7 @@
       right: 85px;
       color: var(--slider-button);
       transition: all 0.3s ease 0s;
-      &:hover{
+      &:hover {
         background: var(--slider-button);
         color: var(--white);
       }
@@ -106,4 +107,60 @@
     }
   }
 }
-
+@media (max-width: 1270px) {
+  .swiper {
+    margin-top: 100px;
+    margin-bottom: 150px;
+  }
+}
+@media (max-width: 980px) {
+  .swiper {
+    &__title {
+      padding-bottom: 100px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 130px;
+    }
+    .card {
+      max-width: 520px;
+      min-height: 522px;
+      margin: 0 auto;
+    }
+    .card__content {
+      &-title {
+        width: 260px;
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .swiper {
+    .card__content {
+      &-title {
+        width: 180px;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .swiper{
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 170px;
+    }
+  }
+}
+@media (max-width: 424px){
+  .swiper{
+      margin-top: 60px;
+      margin-bottom: 100px;
+    &__title{
+      padding-bottom: 55px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+  }
+}
