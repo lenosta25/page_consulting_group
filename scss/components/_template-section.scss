@@ -1,6 +1,3 @@
-@import "_reset.scss";
-@import "_variables.scss";
-
 .template-left {
   @include template-container;
   &__img-wrapper {
@@ -16,7 +13,7 @@
     @include template-border;
     top: 72px;
     left: 197px;
-    border-image-source: var(--gradient-main-right);
+    border-image-source: $gradient-main-right;
   }
   .success-company {
     @include template-bg;
@@ -27,7 +24,7 @@
       font-weight: 500;
       font-size: 24px;
       line-height: 30px;
-      color: var(--white);
+      color: $white;
       padding-top: 28px;
     }
     &__list {
@@ -45,7 +42,7 @@
           width: 20px;
           height: 20px;
           border-radius: 50%;
-          background: var(--gradient-main-right);
+          background: $gradient-main-right;
         }
         &::after {
           position: absolute;
@@ -55,7 +52,7 @@
           width: 10px;
           height: 10px;
           border-radius: 50%;
-          background: var(--dark);
+          background: $dark;
         }
       }
     }
@@ -115,7 +112,7 @@
     @include template-border;
     top: 102px;
     right: 197px;
-    border-image-source: var(--gradient-main-left);
+    border-image-source: $gradient-main-left;
   }
 }
 @media (max-width: 1650px) {

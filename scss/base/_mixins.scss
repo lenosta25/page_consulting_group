@@ -1,0 +1,36 @@
+@mixin template-container {
+  display: flex;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+@mixin template-border {
+  position: absolute;
+  z-index: 0;
+  padding-bottom: clamp(18.75rem, 12.837rem + 26.28vw, 44.375rem);
+  padding-left: clamp(43.75rem, 40.865rem + 12.82vw, 56.25rem);
+  border: 30px solid;
+  border-image-slice: 1;
+}
+@mixin template-bg {
+  position: absolute;
+  z-index: 2;
+  top: 173px;
+  width: 100%;
+  max-width: 1100px;
+  height: 750px;
+  background: $dark;
+}
+@mixin arrow {
+  font-weight: 700;
+  font-size: 33px;
+  color: $hover-color;
+}
+@mixin arrow-bg {
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  line-height: 77px;
+  text-align: center;
+}

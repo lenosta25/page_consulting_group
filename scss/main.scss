@@ -1,0 +1,11 @@
+@import "./base/reset";
+@import "./base/variables";
+@import "./base/mixins";
+@import "./base/base";
+// components
+@import "./components/header";
+@import "./components/about-company";
+@import "./components/template-section";
+@import "./components/swiper";
+@import "./components/company-help";
+@import "./components/news";

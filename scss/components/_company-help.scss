@@ -1,8 +1,5 @@
-@import "_reset.scss";
-@import "_variables.scss";
-
 .company-help {
-  background-image: var(--gradient-bg),
+  background-image: $gradient-bg,
     url(../img/bg/successful-business-team.png);
   background-position: top;
   background-repeat: no-repeat;
@@ -10,7 +7,7 @@
   -webkit-box-shadow: 0px 6px 10px -3px rgba(35, 38, 38, 0.42);
   -moz-box-shadow: 0px 6px 10px -3px rgba(35, 38, 38, 0.42);
   box-shadow: 0px 6px 10px -3px rgba(35, 38, 38, 0.42);
-  margin-top: 475px;
+  margin-top: 303px;
   margin-bottom: 130px;
   padding: clamp(6.25rem, 5.575rem + 3.38vw, 9.625rem) 0;
   &__container{
@@ -24,8 +21,14 @@
    margin-bottom: 48px;
   }
 }
+@media (max-width: 1650px) {
+  .company-help{
+    margin-top: 434px;
+ }
+}
 @media (max-width: 1270px) {
    .company-help{
       margin: 0;
+      opacity: 0.85;
    }
 }

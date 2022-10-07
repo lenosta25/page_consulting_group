@@ -1,18 +1,16 @@
-@import "_reset.scss";
-@import "_variables.scss";
 .about-company {
   padding-top: clamp(4.375rem, 3.625rem + 3.75vw, 8.125rem);
   padding-bottom: 164px;
   &__title {
     text-align: center;
-    color: var(--dark);
+    color: $dark;
     padding-bottom: 20px;
   }
   &__txt {
     max-width: 922px;
     margin: 0 auto;
     text-align: center;
-    color: var(--dark-shade);
+    color: $dark-shade;
     & + * {
       margin-top: 20px;
     }
@@ -26,7 +24,7 @@
     padding-top: clamp(1.875rem, 0.912rem + 4.81vw, 6.688rem);
     &__group {
       padding-right: 40px;
-      border-right: 1px solid var(--vertical-line);
+      border-right: 1px solid $vertical-line;
       height: 38px;
       &:last-child {
         padding-right: 0px;
@@ -39,7 +37,7 @@
         font-size: 27px;
         line-height: 35px;
         text-align: center;
-        color: var(--dark);
+        color: $dark;
         #counter {
           width: 40px;
         }
@@ -48,7 +46,7 @@
         width: 183px;
         font-size: 16px;
         line-height: 23px;
-        color: var(--dark-shade);
+        color: $dark-shade;
       }
     }
   }

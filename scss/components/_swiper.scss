@@ -1,5 +1,3 @@
-@import "_reset.scss";
-@import "_variables.scss";
 .swiper {
   max-width: 1920px;
   width: 100%;
@@ -32,16 +30,16 @@
     }
     .swiper-button-next {
       right: 15px;
-      background: var(--slider-button);
-      color: var(--white);
+      background: $slider-button;
+      color: $white;
     }
     .swiper-button-prev {
       right: 85px;
-      color: var(--slider-button);
+      color: $slider-button;
       transition: all 0.3s ease 0s;
       &:hover {
-        background: var(--slider-button);
-        color: var(--white);
+        background: $slider-button;
+        color: $white;
       }
     }
   }
@@ -59,7 +57,7 @@
       content: "";
       width: 100%;
       height: 100%;
-      background: var(--gradient-cards);
+      background: $gradient-cards;
     }
     img {
       position: absolute;
@@ -83,7 +81,7 @@
       }
       &-icon {
         @include arrow-bg;
-        border: 3px solid var(--hover-color);
+        border: 3px solid $hover-color;
         transition: all 0.3s ease 0s;
         opacity: 0;
         i {
