@@ -45,7 +45,7 @@
   }
   .card {
     position: relative;
-    max-width: 420px;
+    width: 420px;
     min-height: 422px;
     border-radius: 20px;
     overflow: hidden;
@@ -121,8 +121,6 @@
       top: 130px;
     }
     .card {
-      max-width: 520px;
-      min-height: 522px;
       margin: 0 auto;
     }
     .card__content {
@@ -142,19 +140,22 @@
   }
 }
 @media (max-width: 500px) {
-  .swiper{
+  .swiper {
     .swiper-button-next,
     .swiper-button-prev {
       top: 170px;
     }
   }
 }
-@media (max-width: 424px){
-  .swiper{
-      margin-top: 60px;
-      margin-bottom: 100px;
-    &__title{
-      padding-bottom: 55px;
+@media (max-width: 424px) {
+  .swiper {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    &__title {
+      padding-bottom: 20px;
+    }
+    .card__content {
+      padding: 0 0 44px 15px;
     }
     .swiper-button-next,
     .swiper-button-prev {

@@ -173,7 +173,7 @@ h3 {
 
 .header {
   padding-top: 40px;
-  background-image: linear-gradient(rgba(35, 38, 38, 0.97), rgba(35, 38, 38, 0.97)), url(../img/bg/business-team-meeting.png);
+  background-image: linear-gradient(rgba(35, 38, 38, 0.97), rgba(35, 38, 38, 0.97)), url(../img/bg/business-team-meeting.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -730,7 +730,7 @@ h3 {
 }
 .swiper .card {
   position: relative;
-  max-width: 420px;
+  width: 420px;
   min-height: 422px;
   border-radius: 20px;
   overflow: hidden;
@@ -810,8 +810,6 @@ h3 {
     top: 130px;
   }
   .swiper .card {
-    max-width: 520px;
-    min-height: 522px;
     margin: 0 auto;
   }
   .swiper .card__content-title {
@@ -832,10 +830,13 @@ h3 {
 @media (max-width: 424px) {
   .swiper {
     margin-top: 60px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
   }
   .swiper__title {
-    padding-bottom: 55px;
+    padding-bottom: 20px;
+  }
+  .swiper .card__content {
+    padding: 0 0 44px 15px;
   }
   .swiper .swiper-button-next,
 .swiper .swiper-button-prev {

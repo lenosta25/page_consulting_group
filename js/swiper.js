@@ -2,28 +2,23 @@ const swiper = new Swiper(".swiper", {
    direction: "horizontal",
    centeredSlides: true,
    loop: true,
-   slidesPerView: 1,
    spaceBetween: 30,
    breakpoints: {
      1000:{
        slidesPerView: 2.5,
-       spaceBetween: 20,
        initialSlide: 1,
      },
      1450: {
        slidesPerView: 3,
-       spaceBetween: 20,
        initialSlide: 2,
      },
      1550: {
        slidesPerView: 3.5,
-       spaceBetween: 20,
        initialSlide: 2,
      },
      1920: {
        loop: true,
        slidesPerView: 4.5,
-       spaceBetween: 30,
        initialSlide: 2,
      },
    },
