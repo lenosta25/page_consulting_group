@@ -17,7 +17,6 @@ const swiper = new Swiper(".swiper", {
        initialSlide: 2,
      },
      1920: {
-       loop: true,
        slidesPerView: 4.5,
        initialSlide: 2,
      },

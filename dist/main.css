@@ -173,7 +173,7 @@ h3 {
 
 .header {
   padding-top: 40px;
-  background-image: linear-gradient(rgba(35, 38, 38, 0.97), rgba(35, 38, 38, 0.97)), url(../img/bg/business-team-meeting.jpg);
+  background-image: linear-gradient(rgba(35, 38, 38, 0.97), rgba(35, 38, 38, 0.97)), url(../img/bg/business-team-meeting.png);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -252,6 +252,19 @@ h3 {
 .header__top-burger._active span:last-child {
   transform: rotate(45deg);
   bottom: calc(50% - 1px);
+}
+.header .blackout {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+}
+.header .blackout._active {
+  display: block;
 }
 .header__banner {
   max-width: 700px;
