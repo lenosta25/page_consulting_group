@@ -1,47 +1,43 @@
 .news {
-  margin-top: 304px;
-  margin-bottom: 130px;
+  padding: 304px 0 130.5px;
   &__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include display-flex(row, space-between, center);
     padding-bottom: 44px;
     &-titel {
       color: $dark;
     }
   }
   &__items {
-    display: flex;
+    @include display-flex(row, stretch, stretch);
     gap: 30px;
   }
   .card {
     width: 308px;
+    height: 456px;
     border-radius: 13px;
     background: $white-shade;
     overflow: hidden;
-    position: relative;
     transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
     cursor: pointer;
     &__content {
+      @include display-flex(column, space-between, stretch);
       padding: 21px 21px 32px 21px;
+      position: relative;
       .date {
-        margin-left: 65%;
-        max-width: 92px;
+        @include display-flex(column, center, center);
+        position: absolute;
+        top: 21px;
+        right: 21px;
+        width: 92px;
         height: 92px;
         background: $white;
         border-radius: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         &__number {
           font-size: 28px;
           line-height: 33px;
           color: $dark;
         }
         &__month {
-          font-weight: 400;
           font-size: 13px;
           line-height: 18px;
           text-transform: uppercase;
@@ -49,30 +45,24 @@
         }
       }
       &-heading {
-        padding-top: 176px;
-        padding-bottom: 17px;
-        font-size: 24px;
+        padding: 274px 0 17px;
+        font-size: clamp(1.25rem, 0.762rem + 0.62vw, 1.5rem);
         line-height: 30px;
+        transition: all 0.4s ease-in-out 0.1s;
       }
       &-inner {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include display-flex(column, center, stretch);
         .txt {
-         //  opacity: 0;
-          display: none;
-          font-weight: 400;
+          opacity: 0;
           font-size: 16px;
           line-height: 23px;
-          -webkit-transform: translateY(32px);
-          transform: translateY(32px);
+          overflow: hidden;
+          transform: translateY(calc(100% - 54px));
           transition: all 0.4s ease-in-out 0.2s;
           -webkit-transition: all 0.4s ease-in-out 0.2s;
         }
         .more {
-          align-items: center;
-          display: flex;
-          align-items: center;
+          @include display-flex(row, stretch, center);
           span {
             font-weight: 600;
             font-size: 16px;
@@ -81,35 +71,94 @@
           span:last-child {
             padding-left: 9px;
           }
+          &:hover{
+            color: $hover-color;
+          }
         }
       }
     }
   }
-  .card:hover {
-    .card__content-more {
-      color: $hover-color;
-    }
-  }
+
   .active {
     width: 645px;
     .card {
       &__content {
-        .date {
-          margin-left: 84%;
-        }
         &-heading {
-          padding-top: 119px;
-          font-size: 28px;
+          padding-top: 219px;
+          font-size: clamp(1.5rem, 1.012rem + 0.62vw, 1.75rem);
           line-height: 33px;
         }
         &-inner {
           flex-direction: column-reverse;
           .txt {
-            display: block;
-            padding-bottom: 50px;
+            opacity: 1;
+            transform: none;
+            padding-bottom: 29px;
           }
         }
       }
+    }
+  }
+}
+@media (max-width: 1650px) {
+  .news {
+    padding-top: 420px;
+  }
+}
+@media (max-width: 1270px) {
+  .news {
+    padding-top: 100px;
+    .card {
+      width: 645px;
+      &:nth-child(1) {
+        display: none;
+      }
+      &__content {
+        &-heading {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 885px) {
+  .news {
+    &__container {
+      position: relative;
+    }
+    &__wrapper {
+      flex-direction: column;
+      gap: 520px;
+    }
+    .card {
+      width: 90%;
+      position: absolute;
+      top: 80px;
+      left: 15px;
+      right: 15px;
+      margin: auto;
+    }
+    .active .card__content,
+    .card__content {
+      &-heading {
+        padding-top: 120px;
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .news {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    .card:nth-child(2) {
+      display: none;
+    }
+  }
+}
+@media (max-width: 395px) {
+  .news {
+    .card {
+      top: 110px;
     }
   }
 }

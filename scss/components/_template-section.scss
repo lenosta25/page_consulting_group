@@ -79,7 +79,6 @@
 }
 .template-right {
   @include template-container;
-  // margin-bottom: 350px;
   flex-direction: row-reverse;
   .logistics {
     @include template-bg;

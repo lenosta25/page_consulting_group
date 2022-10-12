@@ -1,6 +1,9 @@
-$(document).ready(function () {
-   $(".news__items .news__card").click(function () {
-     $(".news__items .news__card").not($(this)).removeClass("active");
-     $(this).toggleClass("active");
-   });
- });
+const newsCards = document.querySelectorAll(".news__card");
+for (let i = 0; i < newsCards.length; i++) {
+  newsCards[i].addEventListener("click", function () {
+    for (let i = 0; i < newsCards.length; i++) {
+      newsCards[i].classList.remove("active");
+    }
+    this.classList.add("active");
+  });
+}

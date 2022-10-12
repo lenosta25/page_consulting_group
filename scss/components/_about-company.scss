@@ -16,9 +16,7 @@
     }
   }
   .achievements {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    @include display-flex(row, space-around, flex-start);
     flex-wrap: wrap;
     gap: 40px;
     padding-top: clamp(1.875rem, 0.912rem + 4.81vw, 6.688rem);
