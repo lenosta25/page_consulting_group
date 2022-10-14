@@ -80,7 +80,11 @@ input[type=submit] {
 
 input:focus,
 input:active,
-button:focus,
+textarea:focus,
+textarea:active,
+select:focus,
+select:active,
+button:active,
 button:active {
   outline: none;
 }
@@ -100,6 +104,20 @@ label {
     #232626 -1.1%,
     rgba(35, 38, 38, 0) 78.99%
   );
+}
+
+.feedback .form__comment-textarea, .feedback .form__item-input,
+.feedback .form__item select, .feedback .form__comment-input,
+.feedback .form__comment select {
+  background: #f8f8f8;
+  border-radius: 5px;
+  font-size: 15px;
+  line-height: 18px;
+  color: #5d5e5f;
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #dadada;
 }
 
 [class*=__container] {
@@ -1061,4 +1079,164 @@ h3 {
   .news .card {
     top: 110px;
   }
+}
+.feedback {
+  background-image: linear-gradient(90deg, rgba(192, 138, 38, 0.9) 0%, #836328 100%), url(../img/bg/team-conference.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 116px 0 122px;
+  /*.filed - this class is added when the form is 
+  filled but the form is not focused*/
+}
+.feedback__title {
+  text-align: center;
+}
+.feedback__description {
+  margin: 0 auto;
+  padding: 16px 0 56px;
+  max-width: 884px;
+  line-height: 27px;
+  text-align: center;
+}
+.feedback__description .phone-number {
+  font-size: 19px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.feedback__description .phone-number:hover {
+  text-decoration: underline;
+}
+.feedback .form {
+  margin: 0 auto;
+  padding: 57px 37px;
+  max-width: 890px;
+  border-radius: 10px;
+  background: #ffffff;
+}
+.feedback .form__title {
+  max-width: 519px;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 47px;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 25px;
+  color: #232626;
+}
+.feedback .form__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.feedback .form__item, .feedback .form__comment {
+  position: relative;
+}
+.feedback .form__item-label, .feedback .form__comment-label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #5d5e5f;
+  transition: 0.5s;
+}
+.feedback .form__item-input,
+.feedback .form__item select, .feedback .form__comment-input,
+.feedback .form__comment select {
+  transition: all 0.3s ease 0s;
+}
+.feedback .form__item {
+  width: 400px;
+}
+.feedback .form__comment {
+  max-width: 815px;
+}
+.feedback .form__comment-textarea {
+  resize: none;
+  min-height: 139px;
+  transition: all 0.3s ease 0s;
+}
+.feedback .form__contact-type {
+  padding: 33px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 61px;
+}
+.feedback .form__contact-type p {
+  font-size: 15px;
+  line-height: 18px;
+  color: #232626;
+}
+.feedback .form__contact-type .options {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 31px;
+}
+.feedback .form__contact-type .options__item-label {
+  display: inline-flex;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #5d5e5f;
+  position: relative;
+}
+.feedback .form__contact-type .options__item-label::before {
+  content: "";
+  height: 15px;
+  align-self: start;
+  flex: 0 0 15px;
+  background: inherit;
+  border: 2px solid rgba(192, 138, 38, 0.8980392157);
+  border-radius: 50%;
+  margin-right: 9px;
+}
+.feedback .form__contact-type .options__item-label::after {
+  transition: transform 0.3s ease 0s;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #9a762f 0%, #f2c977 100%);
+  transform: scale(0);
+}
+.feedback .form__contact-type .options__item-input {
+  display: none;
+}
+.feedback .form__contact-type .options__item-input:checked + .options__item-label::after {
+  transform: scale(1);
+}
+.feedback .form__btn {
+  margin-top: 47px;
+}
+.feedback .form__item-input:focus,
+.feedback input.filed,
+.feedback .form__comment-textarea:focus,
+.feedback textarea.filed {
+  border-color: rgba(192, 138, 38, 0.8980392157);
+}
+.feedback .form__item-input:focus + .form__item-label,
+.feedback input.filed + .form__item-label,
+.feedback .form__comment-textarea:focus + .form__comment-label,
+.feedback textarea.filed + .form__comment-label {
+  background: #ffffff;
+  color: rgba(192, 138, 38, 0.8980392157);
+  font-weight: 600;
+  padding: 0 2px;
+  transform: translateY(-24px);
+  font-size: 12px;
+  line-height: 9px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }/*# sourceMappingURL=main.css.map */

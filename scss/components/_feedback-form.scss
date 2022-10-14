@@ -1,0 +1,171 @@
+.feedback {
+  background-image: $gradient-bg, url(../img/bg/team-conference.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 116px 0 122px;
+  &__title {
+    text-align: center;
+  }
+  &__description {
+    margin: 0 auto;
+    padding: 16px 0 56px;
+    max-width: 884px;
+    line-height: 27px;
+    text-align: center;
+    .phone-number {
+      font-size: 19px;
+      cursor: pointer;
+      font-weight: 600;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .form {
+    margin: 0 auto;
+    padding: 57px 37px;
+    max-width: 890px;
+    border-radius: 10px;
+    background: $white;
+
+    &__title {
+      max-width: 519px;
+      text-align: center;
+      margin: 0 auto;
+      padding-bottom: 47px;
+      font-weight: 500;
+      font-size: 19px;
+      line-height: 25px;
+      color: $dark;
+    }
+
+    &__wrapper {
+      @include display-flex(row, space-between, stretch);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    &__item,
+    &__comment {
+      position: relative;
+      &-label {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        color: $dark-shade;
+        transition: 0.5s;
+      }
+      &-input,
+      select {
+        @extend %style-input;
+        transition: all 0.3s ease 0s;
+      }
+    }
+    &__item {
+      width: 400px;
+    }
+    &__comment {
+      max-width: 815px;
+      &-textarea {
+        @extend %style-input;
+        resize: none;
+        min-height: 139px;
+        transition: all 0.3s ease 0s;
+      }
+    }
+    // style radio-btn
+    &__contact-type {
+      padding: 33px 0;
+      @include display-flex(row, flex-start, center);
+      gap: 61px;
+      p {
+        font-size: 15px;
+        line-height: 18px;
+        color: $dark;
+      }
+      .options {
+        @include display-flex(row, flex-start, center);
+        gap: 31px;
+        &__item {
+          &-label {
+            display: inline-flex;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            color: $dark-shade;
+            position: relative;
+
+            &::before {
+              content: "";
+              height: 15px;
+              align-self: start;
+              flex: 0 0 15px;
+              background: inherit;
+              border: 2px solid #c08a26e5;
+              border-radius: 50%;
+              margin-right: 9px;
+            }
+            &::after {
+              transition: transform 0.3s ease 0s;
+              position: absolute;
+              top: 5px;
+              left: 5px;
+              content: "";
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background: $gradient-main-right;
+              transform: scale(0);
+            }
+          }
+          &-input {
+            display: none;
+          }
+        }
+      }
+      .options__item-input:checked + .options__item-label::after {
+        transform: scale(1);
+      }
+    }
+
+    &__btn {
+      margin-top: 47px;
+    }
+
+    // error
+    // .error {
+    //   border-radius: 5px;
+    //   box-shadow: 0 0 4px red;
+    // }
+  }
+
+  /*.filed - this class is added when the form is 
+  filled but the form is not focused*/
+
+  //focus input
+  .form__item-input:focus,
+  input.filed,
+  .form__comment-textarea:focus,
+  textarea.filed {
+    border-color: #c08a26e5;
+  }
+
+  //focus pop-up label
+  .form__item-input:focus + .form__item-label,
+  input.filed + .form__item-label,
+  .form__comment-textarea:focus + .form__comment-label,
+  textarea.filed + .form__comment-label {
+    background: $white;
+    color: #c08a26e5;
+    font-weight: 600;
+    padding: 0 2px;
+    transform: translateY(-24px);
+    font-size: 12px;
+    line-height: 9px;
+    backdrop-filter: blur(10px);
+  }
+}

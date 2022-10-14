@@ -258,8 +258,8 @@
           <div class="news__wrapper">
             <h2 class="news__wrapper-titel">News & Announcements</h2>
             <button class="news__wrapper-btn btn">Read More News</button>
-          </div> 
-          <div class="news__items ">
+          </div>
+          <div class="news__items">
             <article
               class="news__card card active"
               style="
@@ -317,7 +317,7 @@
               </div>
             </article>
             <article
-              class="news__card card "
+              class="news__card card"
               style="
                 background-image: var(--gradient-news-cards),
                   url('./img/photo-news/port-terminal-industrial-dock-freight-shipment.png');
@@ -347,11 +347,152 @@
           </div>
         </div>
       </section>
+      <section class="feedback">
+        <div class="feedback__container">
+          <h2 class="feedback__title">Let’s Do This Together</h2>
+          <p class="feedback__description">
+            Take the next step by learning more about Gibson Consulting’s
+            capabilities and qualifications. To request information or arrange a
+            face-to-face introduction, simply fill out the form below or give us
+            a call at
+            <a class="phone-number" href="tel:+312.291.4640">312.291.4640</a>.
+          </p>
+          <form class="feedback__form form" id="form" action="#">
+            <h5 class="form__title">
+              Focused expertise, extensive category experience, proven and
+              profitable results…How may we help you?
+            </h5>
+            <div class="form__wrapper">
+              <!--form first-name -->
+              <div class="form__item" id="item">
+                <input
+                  class="form__item-input _req"
+                  id="first-name"
+                  type="text"
+                />
+                <label class="form__item-label" for="first-name"
+                  >First Name</label
+                >
+              </div>
+
+              <!--form last-name -->
+              <div class="form__item" id="item">
+                <input
+                  class="form__item-input _req"
+                  id="last-name"
+                  type="text"
+                />
+                <label class="form__item-label" for="last-name"
+                  >Last Name</label
+                >
+              </div>
+
+              <!--form email-address -->
+              <div class="form__item" id="item">
+                <input
+                  class="form__item-input _email _req"
+                  id="email-address"
+                  type="text"
+                />
+                <label class="form__item-label" for="email-address"
+                  >Email Address</label
+                >
+              </div>
+
+              <!--form phone-number -->
+              <div class="form__item" id="item">
+                <input
+                  class="form__item-input _req"
+                  id="phone-number"
+                  type="text"
+                />
+                <label class="form__item-label" for="phone-number"
+                  >Phone Number</label
+                >
+              </div>
+
+              <!--form company-name -->
+              <div class="form__item" id="item">
+                <input class="form__item-input" id="company-name" type="text" />
+                <label class="form__item-label" for="company-name"
+                  >Company Name</label
+                >
+              </div>
+
+              <!--form select -->
+              <div class="form__item">
+                <!-- <label for="form__item-label">How Can We Help?</label> -->
+                <select name="help">
+                  <!-- <label for="form__item-label">How Can We Help?</label> -->
+                  <!-- <option class="form__item-label">How Can We Help?</option> -->
+                  <option value="Answer the questions">
+                    Answer the questions
+                  </option>
+                  <option value="Tell about services">
+                    Tell about services
+                  </option>
+                  <option value="Tell about the company">
+                    Tell about the company
+                  </option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+            <!--form radio-btn -->
+            <div class="form__contact-type focus">
+              <p>Preferred Method Of Contact :</p>
+              <div class="options">
+                <div class="options__item">
+                  <input
+                    class="options__item-input"
+                    id="type-phone"
+                    type="radio"
+                    checked
+                    name="contact-type"
+                    value="phone"
+                  />
+                  <label class="options__item-label" for="type-phone"
+                    >Phone</label
+                  >
+                </div>
+                <div class="options__item">
+                  <input
+                    class="options__item-input"
+                    id="type-email"
+                    type="radio"
+                    name="contact-type"
+                    value="email"
+                  />
+                  <label class="options__item-label" for="type-email"
+                    >Email</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!--form comment -->
+            <div class="form__comment focus" id="item">
+              <textarea
+                class="form__comment-textarea"
+                name="message"
+                id="form-message"
+              ></textarea>
+              <label class="form__comment-label" for="form-message"
+                >Comment...</label
+              >
+            </div>
+
+            <!--form btn -->
+            <button class="form__btn btn" type="submit" id="btn-submit">Submit Message</button>
+          </form>
+        </div>
+      </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
     <script src="./js/animated-counter.js"></script>
     <script src="./js/animate-news-card.js"></script>
+    <script src="./js/form.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
