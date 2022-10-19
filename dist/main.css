@@ -190,6 +190,7 @@ h3 {
 }
 
 .header {
+  position: relative;
   padding-top: 40px;
   background-image: linear-gradient(rgba(35, 38, 38, 0.97), rgba(35, 38, 38, 0.97)), url(../img/bg/business-team-meeting.png);
   background-position: top;
