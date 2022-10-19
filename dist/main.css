@@ -1220,6 +1220,20 @@ h3 {
 .feedback .form__btn {
   margin-top: 47px;
 }
+.feedback .form .error {
+  color: #ff3860;
+  font-size: 10px;
+  padding-top: 5px;
+  line-height: 14px;
+}
+.feedback .form .error input,
+.feedback .form .error textarea {
+  border-color: #ff3860;
+}
+.feedback .form .success input,
+.feedback .form .success textarea {
+  border-color: #09c372;
+}
 .feedback .form__item-input:focus,
 .feedback input.filed,
 .feedback .form__comment-textarea:focus,
@@ -1239,4 +1253,45 @@ h3 {
   line-height: 9px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+}
+
+@media (max-width: 920px) {
+  .feedback {
+    padding: 50px 0;
+  }
+  .feedback__description {
+    padding-bottom: 40px;
+  }
+  .feedback .form__item {
+    width: 100%;
+  }
+}
+@media (max-width: 664px) {
+  .feedback .form__contact-type {
+    padding: 20px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+  }
+}
+@media (max-width: 424px) {
+  .feedback .form {
+    padding: 30px;
+  }
+  .feedback .form__title {
+    font-size: 14px;
+    line-height: 22px;
+    padding-bottom: 30px;
+  }
+  .feedback .form__contact-type {
+    align-items: center;
+  }
+  .feedback .form__contact-type p {
+    font-size: 14px;
+    text-align: center;
+  }
+  .feedback .form__btn {
+    margin-top: 30px;
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */

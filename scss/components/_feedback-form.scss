@@ -137,10 +137,22 @@
     }
 
     // error
-    // .error {
-    //   border-radius: 5px;
-    //   box-shadow: 0 0 4px red;
-    // }
+    .error {
+      color: #ff3860;
+      font-size: 10px;
+      padding-top: 5px;
+      line-height: 14px;
+    }
+    .error input,
+    .error textarea {
+      border-color: #ff3860;
+    }
+
+    // success
+    .success input,
+    .success textarea {
+      border-color: #09c372;
+    }
   }
 
   /*.filed - this class is added when the form is 
@@ -167,5 +179,46 @@
     font-size: 12px;
     line-height: 9px;
     backdrop-filter: blur(10px);
+  }
+}
+
+@media (max-width: 920px) {
+  .feedback {
+    padding: 50px 0;
+    &__description {
+      padding-bottom: 40px;
+    }
+    .form__item {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 664px) {
+  .feedback .form__contact-type {
+    padding: 20px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+  }
+}
+@media (max-width: 424px) {
+  .feedback .form {
+    padding: 30px;
+    &__title {
+      font-size: 14px;
+      line-height: 22px;
+      padding-bottom: 30px;
+    }
+    &__contact-type {
+      align-items: center;
+      p {
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+    &__btn {
+      margin-top: 30px;
+      width: 100%;
+    }
   }
 }
