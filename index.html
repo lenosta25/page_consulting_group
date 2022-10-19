@@ -89,7 +89,7 @@
           <div class="about-company__achievements achievements">
             <div class="achievements__group">
               <div class="achievements__group-counter">
-                <div id="counter" data-target="300">0</div>
+                <div class="counter" data-target="300">0</div>
                 <span>Years</span>
               </div>
               <p class="achievements__group-description">
@@ -98,7 +98,7 @@
             </div>
             <div class="achievements__group">
               <div class="achievements__group-counter">
-                <p id="counter" data-target="40">0</p>
+                <p class="counter" data-target="40">0</p>
                 <span>Years</span>
               </div>
               <p class="achievements__group-description">
@@ -108,7 +108,7 @@
             <div class="achievements__group">
               <div class="achievements__group-counter">
                 <span>$</span>
-                <p id="counter" data-target="10">0</p>
+                <p class="counter" data-target="10">0</p>
                 <span>Billion</span>
               </div>
               <p class="achievements__group-description">
@@ -117,7 +117,7 @@
             </div>
             <div class="achievements__group">
               <div class="achievements__group-counter">
-                <p id="counter" data-target="23">0</p>
+                <p class="counter" data-target="23">0</p>
                 <span>%</span>
               </div>
               <p class="achievements__group-description">
@@ -126,7 +126,7 @@
             </div>
             <div class="achievements__group">
               <div class="achievements__group-counter">
-                <p id="counter" data-target="200">0</p>
+                <p class="counter" data-target="200">0</p>
                 <span>%</span>
               </div>
               <p class="achievements__group-description">
@@ -364,12 +364,8 @@
             </h5>
             <div class="form__wrapper">
               <!--form first-name -->
-              <div class="form__item" id="item">
-                <input
-                  class="form__item-input "
-                  id="first-name"
-                  type="text"
-                />
+              <div class="form__item" >
+                <input class="form__item-input" id="first-name" type="text" />
                 <label class="form__item-label" for="first-name"
                   >First Name</label
                 >
@@ -377,12 +373,8 @@
               </div>
 
               <!--form last-name -->
-              <div class="form__item" id="item">
-                <input
-                  class="form__item-input "
-                  id="last-name"
-                  type="text"
-                />
+              <div class="form__item" >
+                <input class="form__item-input" id="last-name" type="text" />
                 <label class="form__item-label" for="last-name"
                   >Last Name</label
                 >
@@ -390,7 +382,7 @@
               </div>
 
               <!--form email-address -->
-              <div class="form__item" id="item">
+              <div class="form__item" >
                 <input
                   class="form__item-input"
                   id="email-address"
@@ -401,29 +393,22 @@
                 >
                 <div class="error"></div>
               </div>
-
               <!--form phone-number -->
-              <div class="form__item" id="item">
-                <input
-                  class="form__item-input"
-                  id="phone-number"
-                  type="text"
-                />
+              <div class="form__item" >
+                <input class="form__item-input" id="phone-number" type="text" />
                 <label class="form__item-label" for="phone-number"
                   >Phone Number</label
                 >
                 <div class="error"></div>
               </div>
-
               <!--form company-name -->
-              <div class="form__item" id="item">
+              <div class="form__item" >
                 <input class="form__item-input" id="company-name" type="text" />
                 <label class="form__item-label" for="company-name"
                   >Company Name</label
                 >
                 <!-- <div class="error"></div> -->
               </div>
-
               <!--form select -->
               <div class="form__item">
                 <!-- <label for="form__item-label">How Can We Help?</label> -->
@@ -474,7 +459,6 @@
                 </div>
               </div>
             </div>
-
             <!--form comment -->
             <div class="form__comment focus" id="item">
               <textarea
@@ -482,18 +466,52 @@
                 name="message"
                 id="form-message"
               ></textarea>
-              <label class="form__comment-label" for="form-message"
-                >Comment...</label
-              >
+              <label class="form__comment-label" for="form-message">Comment...</label>
               <div class="error"></div>
             </div>
-
             <!--form btn -->
-            <button class="form__btn btn" type="submit" id="btn-submit">Submit Message</button>
+            <button class="form__btn btn" type="submit" id="btn-submit">
+              Submit Message
+            </button>
           </form>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__top">
+          <a href="#" class="footer__top-logo">
+            <img src="./img/logo.svg" alt="logo" />
+          </a>
+          <ul class="footer__top-list list">
+             <li class="list__item"><a href="#">About us</a></li>
+             <li class="list__item"><a href="#">Consulting Services</a></li>
+             <li class="list__item"><a href="#">Industries Served</a></li>
+             <li class="list__item"><a href="#">Our Process</a></li>
+             <li class="list__item"><a href="#">Results</a></li>
+             <li class="list__item"><a href="#">Careers</a></li>
+             <li class="list__item"><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__bottom-copyright">© 2022 ABC Consulting. All Rights Reserved.</p>
+          <div class="footer__bottom-networks networks">
+            <a class="networks__body" href="#!">
+              <i class="icon-facebook"></i>
+            </a>
+            <a class="networks__body" href="#!">
+              <i class="icon-instagram"></i>
+            </a>
+            <a class="networks__body" href="#!">
+              <i class="icon-twitter"></i>
+            </a>
+            <a class="networks__body" href="#!">
+              <i class="icon-pinterest"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
     <script src="./js/animated-counter.js"></script>

@@ -1,4 +1,4 @@
-const counters = document.querySelectorAll("#counter");
+const counters = document.querySelectorAll(".counter");
 
 const loadingObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
